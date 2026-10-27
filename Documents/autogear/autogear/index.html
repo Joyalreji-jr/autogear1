@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoGear – Car Parts & Service</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="logo" href="index.html"><b>AS</b> AutoGear</a>
+  <nav>
+    <a href="#home">Home</a><a href="#shop">Shop</a><a href="#brands">Brands</a>
+    <a href="#service">Service Booking</a><a href="#contact">Contact</a><a href="admin.html">Admin</a>
+  </nav>
+  <button class="btn" id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+</div></header>
+
+<section class="hero" id="home"><div class="wrap">
+  <small class="red">Premium car parts & services</small>
+  <h1>Upgrade Your Drive.<br><span class="red">Unleash Your Performance.</span></h1>
+  <p>High-quality aftermarket parts, performance upgrades and professional car service – all in one place.</p>
+  <form class="search" id="heroSearch">
+    <input id="q" placeholder="Search for parts, brands, or vehicle models...">
+    <button class="btn">Search</button>
+  </form>
+</div></section>
+
+<section class="wrap" id="shop">
+  <h2>Shop by category</h2>
+  <div class="chips" id="cats"></div>
+  <div class="grid" id="products"></div>
+</section>
+
+<section class="wrap" id="brands">
+  <h2>Popular brands</h2>
+  <div class="brands" id="brandList"></div>
+</section>
+
+<section class="wrap" id="service">
+  <h2>Book a service</h2>
+  <form class="card form" id="bookForm">
+    <input name="name" placeholder="Your name" required>
+    <input name="phone" placeholder="Phone number" required>
+    <input name="vehicle" placeholder="Vehicle (e.g. Skyline R34)" required>
+    <select name="service">
+      <option>General Service</option><option>Brake Service</option><option>Suspension Setup</option>
+      <option>Exhaust Fitting</option><option>Engine Tuning</option>
+    </select>
+    <input name="date" type="date" required>
+    <button class="btn">Book service</button>
+  </form>
+</section>
+
+<footer id="contact">
+  <p><b>AutoGear</b> – Upgrade Your Drive. Unleash Your Performance.</p>
+  <p>+91 98765 43210 · support@autogear.in · Kanjirappally, Kerala, India</p>
+  <p>© 2026 AutoGear. All rights reserved.</p>
+</footer>
+
+<div class="modal" id="cartModal"><div class="card">
+  <h2>Your cart</h2>
+  <div id="cartBody"></div>
+  <button class="btn ghost" data-close style="margin-top:12px">Close</button>
+</div></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

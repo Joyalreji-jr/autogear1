@@ -1,0 +1,7 @@
+services:
+  autogear:
+    build: .
+    container_name: autogear-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoGear – Admin</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="logo" href="index.html"><b>AS</b> AutoGear Admin</a>
+  <span><a class="btn ghost" href="index.html">Back to store</a>
+  <button class="btn" id="logout" hidden>Log out</button></span>
+</div></header>
+
+<section class="wrap" id="login">
+  <form class="card form login" id="loginForm">
+    <h2>Admin login</h2>
+    <input name="user" placeholder="Username" autocomplete="username" required>
+    <input name="pass" type="password" placeholder="Password" autocomplete="current-password" required>
+    <button class="btn">Log in</button>
+    <small class="red" id="loginErr"></small>
+  </form>
+</section>
+
+<main class="wrap" id="dash" hidden>
+  <h1>Dashboard</h1>
+  <div class="grid" id="stats"></div>
+
+  <h2>Sales bills</h2>
+  <div class="card scroll"><table>
+    <thead><tr><th>Bill no</th><th>Date</th><th>Customer</th><th>Total (incl. GST)</th><th></th></tr></thead>
+    <tbody id="billRows"></tbody>
+  </table></div>
+
+  <h2>Service bookings</h2>
+  <div class="card scroll"><table>
+    <thead><tr><th>Date</th><th>Customer</th><th>Phone</th><th>Vehicle</th><th>Service</th></tr></thead>
+    <tbody id="bookRows"></tbody>
+  </table></div>
+
+  <h2>Parts inventory</h2>
+  <div class="card scroll"><table>
+    <thead><tr><th>Part</th><th>Brand</th><th>Category</th><th>Price</th><th>Stock</th></tr></thead>
+    <tbody id="stockRows"></tbody>
+  </table></div>
+</main>
+
+<div class="modal" id="invoiceModal"><div class="card" id="invoice"></div></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
